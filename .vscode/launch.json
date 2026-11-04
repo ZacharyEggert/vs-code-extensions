@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run hide-dotfolders",
+      "type": "extensionHost",
+      "request": "launch",
+      "args": ["--extensionDevelopmentPath=${workspaceFolder}/hide-dotfolders"],
+      "outFiles": ["${workspaceFolder}/hide-dotfolders/out/**/*.js"],
+      "preLaunchTask": "watch: hide-dotfolders"
+    }
+  ]
+}

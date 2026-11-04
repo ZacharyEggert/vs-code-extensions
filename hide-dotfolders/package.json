@@ -1,0 +1,40 @@
+{
+  "name": "hide-dotfolders",
+  "displayName": "Hide Dotfolders",
+  "description": "Hide dotfolders in the explorer",
+  "version": "0.0.1",
+  "publisher": "ex-nihilo",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "hideDotfolders.toggle",
+        "title": "Hide Dotfolders: Toggle"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "watch": "tsc -watch -p .",
+    "pretest": "pnpm build",
+    "test": "vscode-test",
+    "package": "vsce package --no-dependencies",
+    "vscode:prepublish": "pnpm build"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.20.5",
+    "@types/vscode": "~1.95.0",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.1.0",
+    "@vscode/vsce": "^4.1.0",
+    "typescript": "^7.0.2"
+  }
+}
