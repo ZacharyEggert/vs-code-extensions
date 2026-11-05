@@ -6,6 +6,11 @@
   "publisher": "ex-nihilo",
   "icon": "icon.png",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZacharyEggert/vs-code-extensions.git",
+    "directory": "hide-dotfolders"
+  },
   "engines": {
     "vscode": "^1.95.0"
   },
