@@ -49,8 +49,9 @@ export function activate(context: vscode.ExtensionContext) {
 
   context.subscriptions.push(
     vscode.commands.registerCommand('hideDotfolders.toggle', toggle),
-    vscode.commands.registerCommand('hideDotfolders.hide', toggle),
-    vscode.commands.registerCommand('hideDotfolders.show', toggle),
+    // context key is unset before activation, so icons can be stale: act only if state differs
+    vscode.commands.registerCommand('hideDotfolders.hide', () => hiddenStore() ? syncContext() : toggle()),
+    vscode.commands.registerCommand('hideDotfolders.show', () => hiddenStore() ? toggle() : syncContext()),
     vscode.workspace.onDidChangeWorkspaceFolders(rescan),
   );
   return rescan().then(syncContext);
@@ -58,9 +59,14 @@ export function activate(context: vscode.ExtensionContext) {
 
 /** Adds `**\/.name` for each new top-level dotfolder; merges into `record` (existing or fresh). */
 async function hide(store: vscode.Memento, record: HideRecord) {
-  // effective value (defaults + user + workspace): any existing key is user-owned or already ours → skip
-  const effective = vscode.workspace.getConfiguration('files').get<Record<string, boolean>>('exclude', {});
-  const added = (await dotfolderNames()).map((n) => `**/${n}`).filter((k) => !(k in effective));
+  // effective values (defaults + user + workspace + each root's folder settings): any existing key is user-owned or already ours → skip
+  const scopes = [undefined, ...(vscode.workspace.workspaceFolders ?? []).map((f) => f.uri)];
+  const effective = scopes.map((uri) =>
+    vscode.workspace.getConfiguration('files', uri).get<Record<string, boolean>>('exclude', {}),
+  );
+  const added = (await dotfolderNames())
+    .map((n) => `**/${n}`)
+    .filter((k) => !effective.some((e) => k in e));
   if (added.length) {
     await writeExclude(record.target, (v) => {
       for (const k of added) v[k] = true;
@@ -72,7 +78,8 @@ async function hide(store: vscode.Memento, record: HideRecord) {
 async function show(store: vscode.Memento) {
   const record = readRecord(store)!;
   await writeExclude(record.target, (v) => {
-    for (const k of record.keys) delete v[k];
+    // only still-`true` keys: a user-edited value is now theirs
+    for (const k of record.keys) if (v[k] === true) delete v[k];
   });
   await store.update(RECORD_KEY, undefined);
 }
