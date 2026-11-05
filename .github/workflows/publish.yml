@@ -1,0 +1,34 @@
+name: Publish
+
+# tag format: <extension-dir>-vA.B.C, e.g. hide-dotfolders-v1.0.0
+on:
+  push:
+    tags: ['*-v[0-9]+.[0-9]+.[0-9]+']
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: pnpm
+      - name: Resolve extension from tag
+        run: |
+          ext="${GITHUB_REF_NAME%-v*}"
+          want="${ext}@${GITHUB_REF_NAME##*-v}"
+          have="$(node -p "const p = require('./$ext/package.json'); p.name + '@' + p.version")"
+          [ "$have" = "$want" ] || { echo "::error::tag wants $want, package.json has $have"; exit 1; }
+          echo "EXT=$ext" >> "$GITHUB_ENV"
+      - run: pnpm install --frozen-lockfile
+      - run: xvfb-run -a pnpm test
+        working-directory: ${{ env.EXT }}
+      - run: pnpm exec vsce publish --no-dependencies
+        working-directory: ${{ env.EXT }}
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
