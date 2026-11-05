@@ -1,2 +1,6 @@
 packages:
   - "*"
+
+# ponytail: vsce-sign postinstall fetches a signing binary; publish works without it (was skipped under pnpm 10 too)
+allowBuilds:
+  "@vscode/vsce-sign": false

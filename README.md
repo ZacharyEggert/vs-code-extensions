@@ -10,7 +10,7 @@ VS Code extensions by [Ex Nihilo LLC](https://www.ex-nihilo.llc/), published as 
 
 ### Setup
 
-Requires Node.js and pnpm (version pinned in `package.json` via `packageManager`; `corepack enable` picks it up).
+Requires Node.js (current LTS) and pnpm, at the version pinned in the root `package.json` `packageManager` field.
 
 ```sh
 pnpm install

@@ -1,3 +1,161 @@
+---
+lockfileVersion: '9.0'
+
+importers:
+
+  .:
+    configDependencies: {}
+    packageManagerDependencies:
+      pnpm:
+        specifier: 12.16.1
+        version: 12.16.1
+
+packages:
+
+  '@pnpm/exe.android-arm64@12.16.1':
+    resolution: {integrity: sha512-PKf78Ew+i0CBYf0Xc+eMcqQiqyBT+u8XCVg1F5roc98/6wWfdYlWhrUMmEBiKWaJ3JqHxrtt8l1NwZ7qfJt2/Q==}
+    cpu: [arm64]
+    os: [android]
+
+  '@pnpm/exe.android-x64@12.16.1':
+    resolution: {integrity: sha512-xdu7gMbB98pdvhwMeA6612Of515FDlRUtfA/1f7nWPZfPLnEdSRBO2u+1N0XBtQ/ennhPH/lrxB1gC6gnR/cdg==}
+    cpu: [x64]
+    os: [android]
+
+  '@pnpm/exe.darwin-arm64@12.16.1':
+    resolution: {integrity: sha512-pVbmIIbhixiLvADLu1WA3TaW8FZy/D72R1De27WbbFx8/2mxvnsTyFVm4fO9kjpjMY7RzJd48CiQ96p8fO3ebQ==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@pnpm/exe.darwin-x64@12.16.1':
+    resolution: {integrity: sha512-xZvQBFqcZjO7vFKTK3XsJpqY6lnBL9EWSLCzVUPq3kZ94+D96gwJCa76xxGNK8Cj32f4eeM91Qg+yNRR4sRpDw==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@pnpm/exe.freebsd-x64@12.16.1':
+    resolution: {integrity: sha512-zTtunfi9mBhRXiXEJYfwiJj0tk7MgTSfqDSRh+Az9FZ9THazVIiQiVNS8jpcsftDOqu7LKNffQdjmgwHDThfUg==}
+    cpu: [x64]
+    os: [freebsd]
+
+  '@pnpm/exe.linux-arm64-musl@12.16.1':
+    resolution: {integrity: sha512-BJ3mOmcmQgcUo92Ee/WfEOt1pRiv3y2MMAkhEiYHd85UiPpHTfFhv+SpCbALmfExzXk3UlaRtMYwHlkQymc4VA==}
+    cpu: [arm64]
+    os: [linux]
+    libc: [musl]
+
+  '@pnpm/exe.linux-arm64@12.16.1':
+    resolution: {integrity: sha512-JaRd5gNxwdNGBBkrZFt8bknrK4YmHVJBW0JMhUQ0fJ0dEYp6C2GT9ExaCqOO8EwYEyqM+jpKgJIK+8WFaJy3ew==}
+    cpu: [arm64]
+    os: [linux]
+    libc: [glibc]
+
+  '@pnpm/exe.linux-ppc64@12.16.1':
+    resolution: {integrity: sha512-FnSV0Jv40S1cMv7vFNWwvu0X567Lec4L4HCRead3CFcD6zQDNbGw81s8N5bcKPahtPD9ApVuhsbmFCx4rw6RMw==}
+    cpu: [ppc64]
+    os: [linux]
+    libc: [glibc]
+
+  '@pnpm/exe.linux-riscv64@12.16.1':
+    resolution: {integrity: sha512-C1Sww4FN5IttD4atRRhAKmQtSGWVp04ZAKNxO8pfu2bkRPwOW+7v+2DH1Xs1W+kZYYpO86BYDvUcadefF+AgaQ==}
+    cpu: [riscv64]
+    os: [linux]
+    libc: [glibc]
+
+  '@pnpm/exe.linux-s390x@12.16.1':
+    resolution: {integrity: sha512-kn2fautsTcxIMODoovQVqZyfpDRdNgGkoeVqNdrKqbeBBvrEl+fXLkmZiq5xDht1LMr4sYiCNcsMfNMT6JPFmg==}
+    cpu: [s390x]
+    os: [linux]
+    libc: [glibc]
+
+  '@pnpm/exe.linux-x64-musl@12.16.1':
+    resolution: {integrity: sha512-PM6ccHCOe/O9SsTflTJTYWfwogJZa6EmUvpnwZgiPguJBddh20wDQKgxUPXf48rDsPm9vMsIij0uHswwwbXL8g==}
+    cpu: [x64]
+    os: [linux]
+    libc: [musl]
+
+  '@pnpm/exe.linux-x64@12.16.1':
+    resolution: {integrity: sha512-RK//8ZLcXGW8A2k8bQOXZDBN1Qu92zN4dYnG1bzj1zoQ1fkZ6jNzZ1AvXtsfGVma795CJtvoaF5bLXf4l/FIUw==}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
+
+  '@pnpm/exe.win32-arm64@12.16.1':
+    resolution: {integrity: sha512-Ox3kNNVxtGw6pK7SVejmeOUgHhUTZgAM7NQQ6cU7frPw3ix9+j7d2MGbRg3fyEFAaKWq8ZAZLTQGcDyLnAu+qA==}
+    cpu: [arm64]
+    os: [win32]
+
+  '@pnpm/exe.win32-x64@12.16.1':
+    resolution: {integrity: sha512-k+FhRJ0ttphFoFIVB1Sk4v76YJAulafmA/Ly57cysesUhhIzVlApeOShUz0jXubKx317TThlEfpQrukldnqORA==}
+    cpu: [x64]
+    os: [win32]
+
+  pnpm@12.16.1:
+    resolution: {integrity: sha512-CR0d7nknV1Zhsl2rPCrjHK/BxU1rce1qZgDPDByxBDSkR+rhQBXxsj4ua+3u1535SpMuIWTSgyKA3OP7MvZW0Q==}
+    engines: {node: '>=18'}
+    hasBin: true
+
+snapshots:
+
+  '@pnpm/exe.android-arm64@12.16.1':
+    optional: true
+
+  '@pnpm/exe.android-x64@12.16.1':
+    optional: true
+
+  '@pnpm/exe.darwin-arm64@12.16.1':
+    optional: true
+
+  '@pnpm/exe.darwin-x64@12.16.1':
+    optional: true
+
+  '@pnpm/exe.freebsd-x64@12.16.1':
+    optional: true
+
+  '@pnpm/exe.linux-arm64-musl@12.16.1':
+    optional: true
+
+  '@pnpm/exe.linux-arm64@12.16.1':
+    optional: true
+
+  '@pnpm/exe.linux-ppc64@12.16.1':
+    optional: true
+
+  '@pnpm/exe.linux-riscv64@12.16.1':
+    optional: true
+
+  '@pnpm/exe.linux-s390x@12.16.1':
+    optional: true
+
+  '@pnpm/exe.linux-x64-musl@12.16.1':
+    optional: true
+
+  '@pnpm/exe.linux-x64@12.16.1':
+    optional: true
+
+  '@pnpm/exe.win32-arm64@12.16.1':
+    optional: true
+
+  '@pnpm/exe.win32-x64@12.16.1':
+    optional: true
+
+  pnpm@12.16.1:
+    optionalDependencies:
+      '@pnpm/exe.android-arm64': 12.16.1
+      '@pnpm/exe.android-x64': 12.16.1
+      '@pnpm/exe.darwin-arm64': 12.16.1
+      '@pnpm/exe.darwin-x64': 12.16.1
+      '@pnpm/exe.freebsd-x64': 12.16.1
+      '@pnpm/exe.linux-arm64': 12.16.1
+      '@pnpm/exe.linux-arm64-musl': 12.16.1
+      '@pnpm/exe.linux-ppc64': 12.16.1
+      '@pnpm/exe.linux-riscv64': 12.16.1
+      '@pnpm/exe.linux-s390x': 12.16.1
+      '@pnpm/exe.linux-x64': 12.16.1
+      '@pnpm/exe.linux-x64-musl': 12.16.1
+      '@pnpm/exe.win32-arm64': 12.16.1
+      '@pnpm/exe.win32-x64': 12.16.1
+
+---
 lockfileVersion: '9.0'
 
 settings:
@@ -14,8 +172,8 @@ importers:
         specifier: ^10.0.10
         version: 10.0.10
       '@types/node':
-        specifier: ^22.20.5
-        version: 22.20.5
+        specifier: ^26.6.6
+        version: 26.6.6
       '@types/vscode':
         specifier: ~1.95.0
         version: 1.95.0
@@ -24,10 +182,10 @@ importers:
         version: 0.0.15
       '@vscode/test-electron':
         specifier: ^3.1.0
-        version: 3.1.0
+        version: 3.1.0(supports-color@8.1.1)
       '@vscode/vsce':
         specifier: ^4.1.0
-        version: 4.1.0
+        version: 4.1.0(supports-color@8.1.1)
       typescript:
         specifier: ^7.0.2
         version: 7.0.2
@@ -213,8 +371,8 @@ packages:
   '@types/mocha@10.0.10':
     resolution: {integrity: sha512-xPyYSz1cMPnJQhl0CLMH68j3gprKZaTjG3s5Vi+fDgx+uhG9NOXwbVt52eFS8ECyXhyKcjDLCBEqBExKuiZb7Q==}
 
-  '@types/node@22.20.5':
-    resolution: {integrity: sha512-U2+DNr+wSjpsTS/wZGYHq7GcwfuSmKiKvoPvK22zwTlRhU91yOniN4qRR5KhIjvif7ysw/dz/hKmfDH0Ris4aA==}
+  '@types/node@26.6.6':
+    resolution: {integrity: sha512-MzQj+8Kx3XI40OmUAE6Qoh58ZMNstNNMwn2nfd3qWsfe7nDNSqJNzes4njhz6AHwrSHOffSLwXU6yb474Q4aog==}
 
   '@types/vscode@1.95.0':
     resolution: {integrity: sha512-0LBD8TEiNbet3NvWsmn59zLzOFu/txSlGxnv5yAFHCrhG9WvAnR3IvfHzMOs2aeWqgvNjq9pO99IUw8d3n+unw==}
@@ -1143,8 +1301,8 @@ packages:
   underscore@1.13.8:
     resolution: {integrity: sha512-DXtD3ZtEQzc7M8m4cXotyHR+FAS18C64asBYY5vqZexfYryNNnDc02W4hKg3rdQuqOYas1jkseX0+nZXjTXnvQ==}
 
-  undici-types@6.21.0:
-    resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
+  undici-types@8.9.0:
+    resolution: {integrity: sha512-KTDyRTYX8sWmKXAikPHHSyc63CRPETMctyjKFupcC6OBLXT3xsN0e9aF7m+mIXutFWpUXuedtowG7iLOzp0kQg==}
 
   url-join@4.0.1:
     resolution: {integrity: sha512-jk1+QP6ZJqyOiuEI9AEWQfju/nB2Pw466kbA0LEZljHwKeMgd9WrAEgEGxjPDD2+TNbbb37rTyhEfrCXfuKXnA==}
@@ -1236,36 +1394,36 @@ snapshots:
     dependencies:
       tslib: 2.9.1
 
-  '@azure/core-auth@1.11.0':
+  '@azure/core-auth@1.11.0(supports-color@8.1.1)':
     dependencies:
       '@azure/abort-controller': 2.2.0
-      '@azure/core-util': 1.14.0
+      '@azure/core-util': 1.14.0(supports-color@8.1.1)
       tslib: 2.9.1
     transitivePeerDependencies:
       - supports-color
 
-  '@azure/core-client@1.11.1':
+  '@azure/core-client@1.11.1(supports-color@8.1.1)':
     dependencies:
       '@azure/abort-controller': 2.2.0
-      '@azure/core-auth': 1.11.0
-      '@azure/core-rest-pipeline': 1.25.0
+      '@azure/core-auth': 1.11.0(supports-color@8.1.1)
+      '@azure/core-rest-pipeline': 1.25.0(supports-color@8.1.1)
       '@azure/core-tracing': 1.4.0
-      '@azure/core-util': 1.14.0
-      '@azure/logger': 1.4.0
+      '@azure/core-util': 1.14.0(supports-color@8.1.1)
+      '@azure/logger': 1.4.0(supports-color@8.1.1)
       tslib: 2.9.1
     transitivePeerDependencies:
       - supports-color
 
   '@azure/core-process@1.0.0': {}
 
-  '@azure/core-rest-pipeline@1.25.0':
+  '@azure/core-rest-pipeline@1.25.0(supports-color@8.1.1)':
     dependencies:
       '@azure/abort-controller': 2.2.0
-      '@azure/core-auth': 1.11.0
+      '@azure/core-auth': 1.11.0(supports-color@8.1.1)
       '@azure/core-tracing': 1.4.0
-      '@azure/core-util': 1.14.0
-      '@azure/logger': 1.4.0
-      '@typespec/ts-http-runtime': 0.3.9
+      '@azure/core-util': 1.14.0(supports-color@8.1.1)
+      '@azure/logger': 1.4.0(supports-color@8.1.1)
+      '@typespec/ts-http-runtime': 0.3.9(supports-color@8.1.1)
       tslib: 2.9.1
     transitivePeerDependencies:
       - supports-color
@@ -1274,24 +1432,24 @@ snapshots:
     dependencies:
       tslib: 2.9.1
 
-  '@azure/core-util@1.14.0':
+  '@azure/core-util@1.14.0(supports-color@8.1.1)':
     dependencies:
       '@azure/abort-controller': 2.2.0
-      '@typespec/ts-http-runtime': 0.3.9
+      '@typespec/ts-http-runtime': 0.3.9(supports-color@8.1.1)
       tslib: 2.9.1
     transitivePeerDependencies:
       - supports-color
 
-  '@azure/identity@4.14.1':
+  '@azure/identity@4.14.1(supports-color@8.1.1)':
     dependencies:
       '@azure/abort-controller': 2.2.0
-      '@azure/core-auth': 1.11.0
-      '@azure/core-client': 1.11.1
+      '@azure/core-auth': 1.11.0(supports-color@8.1.1)
+      '@azure/core-client': 1.11.1(supports-color@8.1.1)
       '@azure/core-process': 1.0.0
-      '@azure/core-rest-pipeline': 1.25.0
+      '@azure/core-rest-pipeline': 1.25.0(supports-color@8.1.1)
       '@azure/core-tracing': 1.4.0
-      '@azure/core-util': 1.14.0
-      '@azure/logger': 1.4.0
+      '@azure/core-util': 1.14.0(supports-color@8.1.1)
+      '@azure/logger': 1.4.0(supports-color@8.1.1)
       '@azure/msal-browser': 5.27.0
       '@azure/msal-node': 7.1.2
       open: 11.0.4
@@ -1299,9 +1457,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@azure/logger@1.4.0':
+  '@azure/logger@1.4.0(supports-color@8.1.1)':
     dependencies:
-      '@typespec/ts-http-runtime': 0.3.9
+      '@typespec/ts-http-runtime': 0.3.9(supports-color@8.1.1)
       tslib: 2.9.1
     transitivePeerDependencies:
       - supports-color
@@ -1393,7 +1551,7 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@secretlint/core@10.2.2':
+  '@secretlint/core@10.2.2(supports-color@8.1.1)':
     dependencies:
       '@secretlint/profiler': 10.2.2
       '@secretlint/types': 10.2.2
@@ -1421,9 +1579,9 @@ snapshots:
 
   '@types/mocha@10.0.10': {}
 
-  '@types/node@22.20.5':
+  '@types/node@26.6.6':
     dependencies:
-      undici-types: 6.21.0
+      undici-types: 8.9.0
 
   '@types/vscode@1.95.0': {}
 
@@ -1487,10 +1645,10 @@ snapshots:
   '@typescript/typescript-win32-x64@7.0.2':
     optional: true
 
-  '@typespec/ts-http-runtime@0.3.9':
+  '@typespec/ts-http-runtime@0.3.9(supports-color@8.1.1)':
     dependencies:
-      http-proxy-agent: 7.0.2
-      https-proxy-agent: 7.0.6
+      http-proxy-agent: 7.0.2(supports-color@8.1.1)
+      https-proxy-agent: 7.0.6(supports-color@8.1.1)
       tslib: 2.9.1
     transitivePeerDependencies:
       - supports-color
@@ -1509,10 +1667,10 @@ snapshots:
     transitivePeerDependencies:
       - monocart-coverage-reports
 
-  '@vscode/test-electron@3.1.0':
+  '@vscode/test-electron@3.1.0(supports-color@8.1.1)':
     dependencies:
-      http-proxy-agent: 7.0.2
-      https-proxy-agent: 7.0.6
+      http-proxy-agent: 7.0.2(supports-color@8.1.1)
+      https-proxy-agent: 7.0.6(supports-color@8.1.1)
       jszip: 3.10.2
       ora: 8.2.0
       semver: 7.8.6
@@ -1558,11 +1716,11 @@ snapshots:
       '@vscode/vsce-sign-win32-arm64': 2.0.6
       '@vscode/vsce-sign-win32-x64': 2.0.6
 
-  '@vscode/vsce@4.1.0':
+  '@vscode/vsce@4.1.0(supports-color@8.1.1)':
     dependencies:
-      '@azure/identity': 4.14.1
+      '@azure/identity': 4.14.1(supports-color@8.1.1)
       '@napi-rs/keyring': 1.3.0
-      '@secretlint/core': 10.2.2
+      '@secretlint/core': 10.2.2(supports-color@8.1.1)
       '@secretlint/secretlint-rule-no-dotenv': 10.2.2
       '@secretlint/secretlint-rule-preset-recommend': 10.2.2
       '@secretlint/source-creator': 10.2.2
@@ -1850,14 +2008,14 @@ snapshots:
 
   html-escaper@2.0.2: {}
 
-  http-proxy-agent@7.0.2:
+  http-proxy-agent@7.0.2(supports-color@8.1.1):
     dependencies:
       agent-base: 7.1.4
       debug: 4.4.3(supports-color@8.1.1)
     transitivePeerDependencies:
       - supports-color
 
-  https-proxy-agent@7.0.6:
+  https-proxy-agent@7.0.6(supports-color@8.1.1):
     dependencies:
       agent-base: 7.1.4
       debug: 4.4.3(supports-color@8.1.1)
@@ -2318,7 +2476,7 @@ snapshots:
 
   underscore@1.13.8: {}
 
-  undici-types@6.21.0: {}
+  undici-types@8.9.0: {}
 
   url-join@4.0.1: {}
 
