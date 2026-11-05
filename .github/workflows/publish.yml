@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: read
+  id-token: write # Marketplace trusted publishing (OIDC)
 
 jobs:
   publish:
@@ -28,7 +29,5 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: xvfb-run -a pnpm test
         working-directory: ${{ env.EXT }}
-      - run: pnpm exec vsce publish --no-dependencies
+      - run: pnpm exec vsce publish --oidc --no-dependencies
         working-directory: ${{ env.EXT }}
-        env:
-          VSCE_PAT: ${{ secrets.VSCE_PAT }}

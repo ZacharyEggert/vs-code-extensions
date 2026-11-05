@@ -50,7 +50,7 @@ Open the repo in VS Code, pick **Run hide-dotfolders** in Run and Debug, press F
 
 3. The [Publish workflow](.github/workflows/publish.yml) checks that the tag matches the extension's `name` and `version`, runs its tests and publishes it to the Marketplace.
 
-Publishing needs a `VSCE_PAT` repo secret: a Marketplace personal access token for the `ex-nihilo` publisher.
+Publishing uses Marketplace trusted publishing (OIDC), no token secret. The `ex-nihilo` publisher has a policy for `ZacharyEggert/vs-code-extensions`, workflow `publish.yml`, no environment.
 
 ## License
 
