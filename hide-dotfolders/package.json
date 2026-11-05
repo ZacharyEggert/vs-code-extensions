@@ -4,6 +4,7 @@
   "description": "Hide dotfolders in the explorer",
   "version": "1.0.0",
   "publisher": "ex-nihilo",
+  "icon": "icon.png",
   "license": "MIT",
   "engines": {
     "vscode": "^1.95.0"
