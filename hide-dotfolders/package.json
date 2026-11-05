@@ -1,0 +1,96 @@
+{
+  "name": "hide-dotfolders",
+  "displayName": "Hide Dotfolders",
+  "description": "Hide dotfolders in the explorer",
+  "version": "0.0.1",
+  "publisher": "ex-nihilo",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Hide Dotfolders",
+      "properties": {
+        "hideDotfolders.scope": {
+          "type": "string",
+          "enum": [
+            "global",
+            "workspace"
+          ],
+          "default": "global",
+          "enumDescriptions": [
+            "Write to user settings (all projects)",
+            "Write to workspace settings (this project)"
+          ],
+          "description": "Where hidden dotfolder entries are written. Changing it while hidden takes effect after the next toggle."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "hideDotfolders.toggle",
+        "title": "Toggle",
+        "category": "Hide Dotfolders"
+      },
+      {
+        "command": "hideDotfolders.hide",
+        "title": "Hide Dotfolders",
+        "icon": "$(eye)"
+      },
+      {
+        "command": "hideDotfolders.show",
+        "title": "Show Dotfolders",
+        "icon": "$(eye-closed)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "hideDotfolders.hide",
+          "when": "view == workbench.explorer.fileView && !hideDotfolders.hidden",
+          "group": "navigation"
+        },
+        {
+          "command": "hideDotfolders.show",
+          "when": "view == workbench.explorer.fileView && hideDotfolders.hidden",
+          "group": "navigation"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "hideDotfolders.hide",
+          "when": "false"
+        },
+        {
+          "command": "hideDotfolders.show",
+          "when": "false"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "watch": "tsc -watch -p .",
+    "pretest": "pnpm build",
+    "test": "vscode-test",
+    "package": "vsce package --no-dependencies",
+    "vscode:prepublish": "pnpm build"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.20.5",
+    "@types/vscode": "~1.95.0",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.1.0",
+    "@vscode/vsce": "^4.1.0",
+    "typescript": "^7.0.2"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ]
+}
