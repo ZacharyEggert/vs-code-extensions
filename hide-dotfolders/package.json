@@ -2,9 +2,15 @@
   "name": "hide-dotfolders",
   "displayName": "Hide Dotfolders",
   "description": "Hide dotfolders in the explorer",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "publisher": "ex-nihilo",
+  "icon": "icon.png",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZacharyEggert/vs-code-extensions.git",
+    "directory": "hide-dotfolders"
+  },
   "engines": {
     "vscode": "^1.95.0"
   },
